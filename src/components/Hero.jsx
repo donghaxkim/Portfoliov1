@@ -33,11 +33,11 @@ const Hero = ({ theme }) => {
   return (
     <div className="section border-b border-neutral-900 h-screen pb-20" id="home">
       <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2 ml-44 flex flex-col items-center lg:items-start mt-[100px]">
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start mt-[100px]">
           <motion.h1
             initial={{ x: -400, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
-            className="pb-16 text-6xl font-medium tracking-tight lg:mt-[300px] lg:text-9xl"
+            className="pb-16 text-6xl ml-44 font-medium tracking-tight lg:mt-[300px] lg:text-9xl"
             style={{
               background: "linear-gradient(to right, #f472b6, #64748b, #7c3aed)",
               backgroundSize: "200% auto",
@@ -50,7 +50,7 @@ const Hero = ({ theme }) => {
             Dongha Kim
           </motion.h1>
 
-          <div className="cursor-pointer text-4xl tracking-tight flex flex-col hover:text-gray-400">
+          <div className="cursor-pointer text-4xl ml-44 tracking-tight flex flex-col hover:text-gray-400">
             <motion.span
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
