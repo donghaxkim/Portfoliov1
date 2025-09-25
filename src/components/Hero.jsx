@@ -32,17 +32,17 @@ const Hero = ({ theme }) => {
     theme === "dark" ? "placeholder-gray-700" : "placeholder-gray-200";
 
   return (
-    <div className="section border-b border-neutral-900 h-screen pb-20" id="home">
-      <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-[11rem] mt-[100px]">
-          {/* Big Title */}
+    <div className="section border-b border-neutral-900 min-h-screen pb-20" id="home">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+        <div className="flex flex-col items-start justify-center min-h-screen">
+
+          {/* Big Title: Dongha / Kim */}
           <motion.h1
             initial={{ x: -400, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
-            className="pb-16 text-[200px] ml-[-10px] font-medium tracking-tighter lg:mt-[300px] lg:text-[200px] leading-[1]"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem] 2xl:text-[12rem] font-medium tracking-tighter leading-[0.9]"
             style={{
-              background:
-                "linear-gradient(to right, #f472b6, #64748b, #7c3aed)",
+              background: "linear-gradient(to right, #f472b6, #64748b, #7c3aed)",
               backgroundSize: "200% auto",
               animation: "gradient-text-animation 3s linear infinite",
               WebkitBackgroundClip: "text",
@@ -50,22 +50,25 @@ const Hero = ({ theme }) => {
               color: "transparent",
             }}
           >
-            Dongha Kim
+            Dongha
+            <br />
+            Kim
           </motion.h1>
 
-          {/* Words + Button */}
-          <div className="cursor-pointer text-[70px] ml-55 tracking-tighter flex flex-col gap-8 leading-[1.2] hover:text-gray-400">
+          {/* Link and Button */}
+          <div className="flex flex-col items-start gap-6 mt-8 sm:mt-10 md:mt-12">
+
             {/* Math Program Link */}
             <motion.span
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
+              style={{ color: "#f472b6" }}
             >
               <a
                 href="https://www.prodigygame.com/main-en/blog/why-is-math-important"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer hover:text-gray-400"
-                style={{ color: "#f472b6", fontWeight: "bold" }}
               >
                 Math @ University of Waterloo
               </a>
@@ -75,29 +78,13 @@ const Hero = ({ theme }) => {
             <motion.button
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-              className="cursor-pointer text-[4rem] ml-[-444px] font-bold hover:underline leading-[0.3]"
-              style={{
-                color: "#f472b6",
-                background: "none",
-                border: "none",
-                padding: 0,
-              }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold hover:underline"
+              style={{ color: "#f472b6", background: "none", border: "none", padding: 0 }}
               type="button"
               onClick={() => setShowMessageBox((prev) => !prev)}
             >
               <TypeAnimation
-                sequence={[
-                  "",
-                  1000,
-                  "Let's chat!",
-                  5000,
-                  "",
-                  2000,
-                  "Let's chat!",
-                  5000,
-                  "",
-                  2000,
-                ]}
+                sequence={["", 1000, "Let's chat!", 5000, "", 2000, "Let's chat!", 5000, "", 2000]}
                 wrapper="span"
                 speed={50}
                 repeat={Infinity}
@@ -106,86 +93,83 @@ const Hero = ({ theme }) => {
               />
             </motion.button>
 
-            {/* Message Box */}
-            {showMessageBox && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center">
-                {/* Overlay */}
-                <div
-                  className="absolute inset-0 bg-gray-500/30 backdrop-blur-sm"
-                  onClick={() => setShowMessageBox(false)}
-                />
-                {/* Modal */}
-                <form
-                  ref={formRef}
-                  onSubmit={handleSend}
-                  className={`relative z-10 w-full max-w-xs ${chatBoxBg} backdrop-blur-sm rounded-2xl p-4 flex flex-col gap-4 shadow-lg`}
-                >
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    className={`rounded-md px-4 py-2 ${chatBoxBg} ${inputText} ${inputPlaceholder} focus:outline-none`}
-                    required
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    className={`rounded-md px-4 py-2 ${chatBoxBg} ${inputText} ${inputPlaceholder} focus:outline-none`}
-                    required
-                  />
-                  <textarea
-                    name="message"
-                    placeholder="Your Message"
-                    rows={4}
-                    className={`rounded-md px-4 py-2 ${chatBoxBg} ${inputText} ${inputPlaceholder} focus:outline-none`}
-                    required
-                  />
-                  <button
-                    type="submit"
-                    className="mt-2 rounded-md text-white font-bold text-sm py-2 px-6 border-2 bg-transparent relative overflow-hidden"
-                    style={{
-                      borderImage:
-                        "linear-gradient(90deg, #f472b6, #64748b, #7c3aed, #f472b6) 1",
-                      animation: "gradient-border-animation 3s linear infinite",
-                    }}
-                  >
-                    Send
-                  </button>
-                </form>
-              </div>
-            )}
-
-            {/* Confirmation Popup */}
-            {showConfirmation && (
-              <div
-                className="fixed inset-0 z-50 flex items-center justify-center"
-                onClick={() => setShowConfirmation(false)}
-              >
-                <div className="relative z-10 bg-gray-500/80 backdrop-blur rounded-2xl px-8 py-6 text-white text-xl font-bold shadow-lg">
-                  <span
-                    style={{
-                      background:
-                        "linear-gradient(to right, #f472b6, #64748b, #7c3aed)",
-                      backgroundSize: "200% auto",
-                      WebkitBackgroundClip: "text",
-                      backgroundClip: "text",
-                      color: "transparent",
-                      animation: "gradient-text-animation 3s linear infinite",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  >
-                    Message sent!
-                  </span>
-                </div>
-                <div className="absolute inset-0 bg-gray-500/30 backdrop-blur-sm" />
-              </div>
-            )}
           </div>
+
+          {/* Message Box */}
+          {showMessageBox && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center">
+              <div
+                className="absolute inset-0 bg-gray-500/30 backdrop-blur-sm"
+                onClick={() => setShowMessageBox(false)}
+              />
+              <form
+                ref={formRef}
+                onSubmit={handleSend}
+                className={`relative z-10 w-full max-w-xs ${chatBoxBg} backdrop-blur-sm rounded-2xl p-4 flex flex-col gap-4 shadow-lg`}
+              >
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  className={`rounded-md px-4 py-2 ${chatBoxBg} ${inputText} ${inputPlaceholder} focus:outline-none`}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  className={`rounded-md px-4 py-2 ${chatBoxBg} ${inputText} ${inputPlaceholder} focus:outline-none`}
+                  required
+                />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows={4}
+                  className={`rounded-md px-4 py-2 ${chatBoxBg} ${inputText} ${inputPlaceholder} focus:outline-none`}
+                  required
+                />
+                <button
+                  type="submit"
+                  className="mt-2 rounded-md text-white font-bold text-sm py-2 px-6 border-2 bg-transparent relative overflow-hidden"
+                  style={{
+                    borderImage:
+                      "linear-gradient(90deg, #f472b6, #64748b, #7c3aed, #f472b6) 1",
+                    animation: "gradient-border-animation 3s linear infinite",
+                  }}
+                >
+                  Send
+                </button>
+              </form>
+            </div>
+          )}
+
+          {/* Confirmation Popup */}
+          {showConfirmation && (
+            <div
+              className="fixed inset-0 z-50 flex items-center justify-center"
+              onClick={() => setShowConfirmation(false)}
+            >
+              <div className="relative z-10 bg-gray-500/80 backdrop-blur rounded-2xl px-8 py-6 text-white text-xl font-bold shadow-lg">
+                <span
+                  style={{
+                    background: "linear-gradient(to right, #f472b6, #64748b, #7c3aed)",
+                    backgroundSize: "200% auto",
+                    WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
+                    color: "transparent",
+                    animation: "gradient-text-animation 3s linear infinite",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  Message sent!
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gray-500/30 backdrop-blur-sm" />
+            </div>
+          )}
+
         </div>
       </div>
-
-      <div className="h-[100px]"></div>
     </div>
   );
 };
