@@ -21,12 +21,12 @@ const Techstack = ({ theme }) => {
   const borderColor = theme === "dark" ? "border-neutral-300" : "border-[#2A3549]";
 
   return (
-    <div className="section border-b border-neutral-300 my-8" id="techstack">
+    <div className="section border-b border-neutral-900 my-8" id="techstack">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 1.5 }}
-        className={`mb-12 mt-20 text-center text-4xl font-extrabold ${textColor}`}
+        className={`mb-[100px] mt-[150px] text-center text-4xl font-extrabold ${textColor}`}
       >
         Techstack
       </motion.h1>
@@ -136,7 +136,7 @@ const Techstack = ({ theme }) => {
           </div>
         </div>
       </motion.div>
-      <div className="h-[100px]"></div>
+      <div className="h-[180px]"></div>
     </div>
   );
 };
