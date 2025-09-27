@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Techstack from "./components/Techstack";
+import Timeline from "./components/Timeline";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
 
@@ -20,6 +21,7 @@ const App = () => {
         <Hero theme={theme} />
         <About theme={theme} />
         <Techstack theme={theme} />
+        <Timeline theme={theme} />
         <Projects theme={theme} />
       </div>
       <Footer />

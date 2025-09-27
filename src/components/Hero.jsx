@@ -32,16 +32,17 @@ const Hero = ({ theme }) => {
     theme === "dark" ? "placeholder-gray-700" : "placeholder-gray-200";
 
   return (
-    <div className="section border-b border-neutral-900 min-h-screen pb-20" id="home">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+    <div className="section border-b border-neutral-900 min-h-screen pb-16" id="home">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col items-start justify-center min-h-screen">
 
           {/* Big Title: Dongha / Kim */}
           <motion.h1
             initial={{ x: -400, opacity: 0 }}
             animate={{ x: 0, opacity: 1, transition: { duration: 0.5 } }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[10rem] 2xl:text-[12rem] font-medium tracking-tighter leading-[0.9]"
+            className="font-medium tracking-tight text-xl leading-[0.9]"
             style={{
+              fontSize: "clamp(3rem, 12vw, 6rem)", // Scales better across screens
               background: "linear-gradient(to right, #f472b6, #64748b, #7c3aed)",
               backgroundSize: "200% auto",
               animation: "gradient-text-animation 3s linear infinite",
@@ -56,14 +57,17 @@ const Hero = ({ theme }) => {
           </motion.h1>
 
           {/* Link and Button */}
-          <div className="flex flex-col items-start gap-6 mt-8 sm:mt-10 md:mt-12">
+          <div className="flex flex-col items-start gap-4 mt-8">
 
             {/* Math Program Link */}
             <motion.span
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-              style={{ color: "#f472b6" }}
+              className="font-bold"
+              style={{ 
+                color: "#f472b6",
+                fontSize: "clamp(1rem, 2vw, 2rem)" // smaller but proportional
+              }}
             >
               <a
                 href="https://www.prodigygame.com/main-en/blog/why-is-math-important"
@@ -78,8 +82,14 @@ const Hero = ({ theme }) => {
             <motion.button
               initial={{ x: -400, opacity: 0 }}
               animate={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold hover:underline"
-              style={{ color: "#f472b6", background: "none", border: "none", padding: 0 }}
+              className="font-bold hover:underline"
+              style={{ 
+                color: "#f472b6", 
+                background: "none", 
+                border: "none", 
+                padding: 0,
+                fontSize: "clamp(1rem, 2vw, 2rem)"
+              }}
               type="button"
               onClick={() => setShowMessageBox((prev) => !prev)}
             >
