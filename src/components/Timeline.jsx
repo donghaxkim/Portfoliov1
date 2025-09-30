@@ -43,7 +43,7 @@ const Timeline = ({ theme }) => {
   ];
 
   return (
-    <div className="section border-b border-neutral-900 my-8" id="timeline">
+    <div className="section border-b border-neutral-900 my-8" id="myjourney">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}

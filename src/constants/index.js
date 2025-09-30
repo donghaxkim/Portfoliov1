@@ -5,117 +5,52 @@ import projectImage4 from "../assets/project4.jpeg";
 import projectImage5 from "../assets/project5.jpeg";
 import projectImage6 from "../assets/project6.jpeg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
-
-export const ABOUT_TEXT = `I am a software chink`;
-
-export const EXPERIENCES = [
-  {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
-];
-
-
-export const CONTACT = {
-  phoneNum: "+1 647-321-3711 ",
-  email: "donghaxkim@gmail.com",
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export const PROJECTS = [
   {
     id: 1,
-    name: "Personal Portfolio",
-    description:
-      "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
+    name: "Neural Net Evolution",
+    description: "A project simulating the evolution of neural networks to solve specific tasks and optimize performance.",
     image: projectImage1,
-    githubLink: "https://github.com/user/personal-portfolio",
+    githubLink: "https://github.com/donghaxkim/NeuralEVO"
   },
   {
     id: 2,
-    name: "E-Commerce Platform",
-    description:
-      "An e-commerce web application developed using Next.js and Stripe for payment integration, featuring a comprehensive product catalog, shopping cart, and checkout system.",
+    name: "Langton's Ant Simulator",
+    description: "A visual simulation of Langton's Ant, demonstrating emergent behavior and cellular automata.",
     image: projectImage2,
-    githubLink: "https://github.com/user/ecommerce-platform",
+    githubLink: "https://github.com/donghaxkim/LangtonsAnt"
   },
   {
     id: 3,
-    name: "Task Management Tool",
-    description:
-      "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards, task assignment, and progress tracking.",
+    name: "MNIST Classifier",
+    description: "A machine learning project classifying handwritten digits using PyTorch, TensorFlow, and NumPy.",
     image: projectImage3,
-    githubLink: "https://github.com/user/task-management-tool",
+    githubLink: "https://github.com/donghaxkim/MNIST-Classifier"
   },
   {
     id: 4,
-    name: "Weather App",
-    description:
-      "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with React and styled-components.",
+    name: "Snake Game",
+    description: "A classic Snake game implemented in Python/JavaScript with customizable features and scoring system.",
     image: projectImage4,
-    githubLink: "https://github.com/user/weather-app",
+    githubLink: "https://github.com/donghaxkim/snake-game"
   },
   {
     id: 5,
-    name: "Blog Platform",
-    description:
-      "A blogging platform developed with Next.js and Markdown for creating, editing, and publishing blog posts. It features a rich text editor, tag system, and user authentication.",
+    name: "Pomodoro Website",
+    description: "A web app to track Pomodoro sessions and manage productivity, built with React, HTML, CSS, and JavaScript.",
     image: projectImage5,
-    githubLink: "https://github.com/user/blog-platform",
+    githubLink: "https://github.com/donghaxkim/pomodoro-website"
   },
   {
     id: 6,
-    name: "Chat Application",
-    description:
-      "A real-time chat application using Firebase for backend services, including user authentication, chat rooms, and instant messaging features. Built with React and Firebase.",
+    name: "Stay tuned for more!",
+    description: "On the mean time stalk my linkedin...",
     image: projectImage6,
-    githubLink: "https://github.com/user/chat-application",
-  },
+    linkedinLink: "https://www.linkedin.com/in/dongha-kimm/"
+  }
 ];
 
-
-
-
-
-
-
+export const CONTACT = {
+  phoneNum: "+1 647-321-3711",
+  email: "donghaxkim@gmail.com",
+};

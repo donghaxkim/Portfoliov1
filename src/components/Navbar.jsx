@@ -1,5 +1,6 @@
+import { motion } from "framer-motion";
 import { BiHomeAlt } from 'react-icons/bi';
-import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { WiMoonAltThirdQuarter, WiDaySunny } from 'react-icons/wi';
 import { Link } from 'react-scroll';
 import { useState, useEffect } from 'react';
@@ -7,10 +8,9 @@ import { useState, useEffect } from 'react';
 const Navbar = ({ theme, toggleTheme }) => {
   const [activeSection, setActiveSection] = useState('');
 
-  // Set active section on scroll
   useEffect(() => {
     const handleSectionScroll = () => {
-      const sections = ['home', 'about', 'techstack', 'projects', 'contact', 'resume', 'contact-info'];
+      const sections = ['home', 'about', 'techstack', 'myjourney', 'projects', 'contact', 'contact-info'];
       let currentSection = '';
 
       sections.forEach((section) => {
@@ -41,49 +41,28 @@ const Navbar = ({ theme, toggleTheme }) => {
       <nav className="fixed top-4 left-0 w-full z-50">
         <div className="container mx-auto">
           <div className={`w-full ${navBg} h-[60px] backdrop-blur-3xl rounded-full max-w-[700px] mx-auto px-5 flex justify-between text-2xl ${iconColor}`}>
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}
-            >
-              <BiHomeAlt />
-            </Link>
+            
+            <motion.div whileHover={{ scale: 1.2 }} className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}>
+              <Link to="home" spy={true} smooth={true} duration={500}>
+                <BiHomeAlt />
+              </Link>
+            </motion.div>
 
-            <a
-              href="https://www.linkedin.com/in/dongha-kimm/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}
-            >
-              <FaLinkedin />
-            </a>
+            <motion.div whileHover={{ scale: 1.2 }} className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}>
+              <a href="https://www.linkedin.com/in/dongha-kimm/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
+            </motion.div>
 
-            <a
-              href="https://github.com/donghaxkim"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}
-            >
-              <FaGithub />
-            </a>
+            <motion.div whileHover={{ scale: 1.2 }} className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}>
+              <a href="https://github.com/donghaxkim" target="_blank" rel="noopener noreferrer">
+                <FaGithub />
+              </a>
+            </motion.div>
 
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}
-            >
-              <FaFileAlt />
-            </a>
-
-            <div
-              className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`}
-              onClick={toggleTheme}
-            >
+            <motion.div whileHover={{ scale: 1.2 }} className={`cursor-pointer w-[60px] h-[60px] flex items-center justify-center ${iconHover}`} onClick={toggleTheme}>
               {theme === 'dark' ? <WiDaySunny /> : <WiMoonAltThirdQuarter />}
-            </div>
+            </motion.div>
           </div>
         </div>
       </nav>
@@ -92,7 +71,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       <nav className="fixed top-[40%] transform -translate-y-1 right-3 z-50">
         <div className="container mx-auto">
           <div className={`${sideNavBg} w-[40px] py-4 backdrop-blur-xl rounded-full flex flex-col items-center justify-center space-y-6 z-50`}>
-            {['home', 'about', 'techstack', 'projects', 'journey'].map((section) => (
+            {['home', 'about', 'techstack', 'myjourney', 'projects'].map((section) => (
               <Link
                 key={section}
                 to={section}

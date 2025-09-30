@@ -1,5 +1,5 @@
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb, SiMysql, SiPostgresql, SiLinux, SiGit, SiGithub, SiVisualstudiocode, SiFigma, SiNumpy, SiPandas, SiExpress, SiNodedotjs, SiCplusplus } from "react-icons/si";
+import { SiMongodb, SiMysql, SiPostgresql, SiLinux, SiGit, SiGithub, SiVisualstudiocode, SiFigma, SiNumpy, SiPandas, SiExpress, SiNodedotjs, SiCplusplus, SiC, SiTypescript, SiSwift, SiOpencv, SiPytorch, SiFlask, SiDocker, SiAmazonaws } from "react-icons/si";
 import { FaPython, FaJs, FaCss3Alt, FaHtml5 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -41,22 +41,30 @@ const Techstack = ({ theme }) => {
           <h2 className={`text-2xl font-bold ${textColor}`}>Languages</h2>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <motion.div variants={iconVariants(2)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
-              <SiCplusplus className="text-7xl text-blue-600" />
-              <span className={`text-lg font-medium ${textColor}`}>C++</span>
+              <SiC className="text-7xl text-gray-600" />
+              <span className={`text-lg font-medium ${textColor}`}>C</span>
             </motion.div>
-            <motion.div variants={iconVariants(2.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+            <motion.div variants={iconVariants(3)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
               <FaPython className="text-7xl text-blue-400" />
               <span className={`text-lg font-medium ${textColor}`}>Python</span>
             </motion.div>
-            <motion.div variants={iconVariants(3)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+            <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
               <FaJs className="text-7xl text-yellow-400" />
               <span className={`text-lg font-medium ${textColor}`}>JavaScript</span>
             </motion.div>
-            <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+            <motion.div variants={iconVariants(4)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+              <SiTypescript className="text-7xl text-blue-600" />
+              <span className={`text-lg font-medium ${textColor}`}>TypeScript</span>
+            </motion.div>
+            <motion.div variants={iconVariants(4.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+              <SiSwift className="text-7xl text-orange-500" />
+              <span className={`text-lg font-medium ${textColor}`}>Swift</span>
+            </motion.div>
+            <motion.div variants={iconVariants(5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
               <FaHtml5 className="text-7xl text-orange-500" />
               <span className={`text-lg font-medium ${textColor}`}>HTML</span>
             </motion.div>
-            <motion.div variants={iconVariants(4)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+            <motion.div variants={iconVariants(5.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
               <FaCss3Alt className="text-7xl text-blue-500" />
               <span className={`text-lg font-medium ${textColor}`}>CSS</span>
             </motion.div>
@@ -87,6 +95,14 @@ const Techstack = ({ theme }) => {
               <SiPandas className="text-7xl text-blue-600" />
               <span className={`text-lg font-medium ${textColor}`}>Pandas</span>
             </motion.div>
+            <motion.div variants={iconVariants(4.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+              <SiOpencv className="text-7xl text-blue-700" />
+              <span className={`text-lg font-medium ${textColor}`}>OpenCV</span>
+            </motion.div>
+            <motion.div variants={iconVariants(5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+              <SiPytorch className="text-7xl text-red-600" />
+              <span className={`text-lg font-medium ${textColor}`}>PyTorch</span>
+            </motion.div>
           </div>
         </div>
 
@@ -109,6 +125,14 @@ const Techstack = ({ theme }) => {
             <motion.div variants={iconVariants(3.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
               <SiLinux className="text-7xl text-black" />
               <span className={`text-lg font-medium ${textColor}`}>Linux</span>
+            </motion.div>
+            <motion.div variants={iconVariants(4)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+              <SiDocker className="text-7xl text-blue-500" />
+              <span className={`text-lg font-medium ${textColor}`}>Docker</span>
+            </motion.div>
+            <motion.div variants={iconVariants(4.5)} initial="initial" animate="animate" className={`flex items-center gap-4 rounded-2xl border-4 p-4 ${borderColor}`}>
+              <SiAmazonaws className="text-7xl text-orange-400" />
+              <span className={`text-lg font-medium ${textColor}`}>AWS</span>
             </motion.div>
           </div>
         </div>
